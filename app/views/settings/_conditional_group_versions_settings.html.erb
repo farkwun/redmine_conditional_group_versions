@@ -1,0 +1,3 @@
+<p>
+  <label><%= l(:available_group_custom_fields)%></label><%= select_tag 'settings[group_custom_list_field]', options_for_select(gcf_list_options, @settings['group_custom_list_field']) %>
+</p>
