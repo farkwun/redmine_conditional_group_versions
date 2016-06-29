@@ -2,6 +2,7 @@
 
 require_dependency 'redmine_conditional_group_versions/project_patch'
 require_dependency 'redmine_conditional_group_versions/settings_helper_patch'
+require_dependency 'redmine_conditional_group_versions/projects_helper_patch'
 
 Redmine::Plugin.register :redmine_conditional_group_versions do
   name 'Redmine Conditional Group Versions'
