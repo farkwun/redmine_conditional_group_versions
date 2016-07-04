@@ -11,7 +11,7 @@ module RedmineConditionalGroupVersions
         # enforces conditional group visibilities on shared_versions
         def shared_versions_with_conditional_group_versions
           the_versions = shared_versions_without_conditional_group_versions
-          unless group_conditional_custom_field.nil?
+          unless group_conditional_custom_field.nil? || User.current.admin?
             # because ActiveRecord::Relation no longer supports 
             # Array-like methods, must convert to Array then back
             the_versions.to_a.reject! {|v| !user_group_can_see?(v)} 
